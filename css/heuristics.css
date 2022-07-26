@@ -1,7 +1,11 @@
-$growFactor: 1.5;/*  SASS (SCSS) variables - look this up */
-$duration: 450ms;
-$moveRight = $tileWidth * ($growFactor - 1)
-$moveLeft = -($tileWidth * ($growFactor - 1) / 2) 
+/*  SASS (SCSS) variables - look this up */
+)
+$growFactor: 1.5;
+)
+$tileWidth = 250px;
+)
+$tileHeight = ($tileWidth / (16/9))
+$moveLeft = -($tileWidth * ($growFactor - 1) / 2)
 $moveRight = $tileWidth * ($growFactor - 1)
 $duration: 450ms;
 
@@ -31,9 +35,6 @@ h1{
 	font-family:'Montserrat', sans-serif;
 	color:white;
 }
-h2{
-	font-size:134px;
-}
 section{
 	background-color:black;
 	width:100vw;
@@ -43,7 +44,7 @@ footer{
 	background-color:black;
 	float:left;
 	width:100vw;
-	height:auto:
+	height:300px:
 }
 
 * { box-sizing: border-box }
@@ -63,8 +64,6 @@ a:visited{
 }
 a:hover{
 	color: #7f8c8d;
-	text-decoration: underline;
-
 }
 .contain{
 	width: 100%	
@@ -75,11 +74,11 @@ a:hover{
 	overflow-y:hidden;
 }
 .row__inner{
-	transition: $duration transform;
-	font-size: 0;
+	/* transition: $duration transform;
+	font-size: 0; */
 	white-space: nowrap;
-	margin: ($tileHeight / 2) 0;
-	padding-bottom: 10px // Account for OS X scroll bar;
+	/* margin: ($tileHeight / 2) 0;
+	padding-bottom: 10px // Account for OS X scroll bar; */
 }
 .tile{
 	position: relative;
@@ -91,6 +90,12 @@ a:hover{
 	cursor: pointer;
 	transition: $duration all;
 	transform-origin: center left;	
+}
+.tile__img{
+	width: $tileWidth;
+	height: $tileHeight;
+	background-image:cover;
+	
 }
 .tile__media{
 	width: $tileWidth;
@@ -121,18 +126,20 @@ a:hover{
 	z-index: 2;
 }
 .tile:hover &{
-	opacity: 1;
+	/* opacity: 1; */
 }
-.row__inner:hover{
+/* .row__inner:hover{
 	transform: 1.5 / 2;	
-}
-.row__inner:hover .tile{
-	opacity: .3;	
+} */
+/* .row__inner:hover .tile{
+	opacity: .3;
+} */
+
+.tile:hover{
+/* 	transform: translated($moveRight, 0, 0);	 */
+	opacity: .3;
 }
  &:hover{
 	transform: scale($growFactor);
 	opacity: 1;
  }
-.tile:hover ~ .tile{
-	transform: translated($moveRight, 0, 0);	
-}
