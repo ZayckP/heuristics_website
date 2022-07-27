@@ -1,5 +1,5 @@
 /*  SASS (SCSS) variables - look this up */
-)
+/* )
 $growFactor: 1.5;
 )
 $tileWidth = 250px;
@@ -7,7 +7,7 @@ $tileWidth = 250px;
 $tileHeight = ($tileWidth / (16/9))
 $moveLeft = -($tileWidth * ($growFactor - 1) / 2)
 $moveRight = $tileWidth * ($growFactor - 1)
-$duration: 450ms;
+$duration: 450ms; */
 
 html{
 	margin:0;
@@ -47,14 +47,14 @@ footer{
 	height:300px:
 }
 
-* { box-sizing: border-box }
+/* * { box-sizing: border-box } */
 
 p{
     width:100%;
     max-width:500px;
     margin:auto;
 }
- :link
+/*  :link
 a:hover
 a:active
 a:visited{
@@ -64,10 +64,10 @@ a:visited{
 }
 a:hover{
 	color: #7f8c8d;
-}
-.contain{
+} */
+/* .contain{
 	width: 100%	
-}
+} */
 .row{
 	overflow: scroll;
 	width: 100%;
@@ -81,41 +81,41 @@ a:hover{
 	padding-bottom: 10px // Account for OS X scroll bar; */
 }
 .tile{
-	position: relative;
+/* 	position: relative; */
 	display: inline-block;
-	width: $tileWidth;
-	height: $tileHeight;
-	margin-right: 10px;
-	font-size: 20px;
-	cursor: pointer;
-	transition: $duration all;
-	transform-origin: center left;	
+	/* width: auto;
+	height: auto; */
+	/* margin-right: 10px; */
+	/* font-size: 20px; */
+	/* cursor: pointer; */
+	/* transition: $duration all; */
+	/* transform-origin: center left;	 */
 }
 .tile__img{
-	width: $tileWidth;
-	height: $tileHeight;
+	width: auto;
+	height: auto;
 	background-image:cover;
-	
 }
 .tile__media{
-	width: $tileWidth;
-	height: $tileHeight;
+	width: auto;
+	height: auto;
+	opacity:1;
 }
-&:after
+/* &:after
 &:before{
 	content: '';
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	display: black;
-}
-&:after{
+} */
+/* &:after{
 	border: 3px solid #ecf0f1;
 	border-radius: 100%;
 	background: rgba(0,0,0,0.5);
-	z-index: 1;
-}
-&:before{
+	z-index: 2;
+} */
+/* &:before{
 	content: '▶';
 	left: 0;
 	width: 100%;
@@ -123,34 +123,36 @@ a:hover{
 	margin-left: 7px;
 	margin-top: -18px;
 	text-align: center;
-	z-index: 2;
-}
-.tile:hover &{
-	/* opacity: 1; */
-}
+	z-index: 1;
+} */
+/* .tile:hover &{
+	opacity: 1;
+} */
 /* .row__inner:hover{
 	transform: 1.5 / 2;	
 } */
 /* .row__inner:hover .tile{
-	opacity: .3;
+	opacity: 1;
 } */
 
-.tile:hover{
-/* 	transform: translated($moveRight, 0, 0);	 */
-	opacity: .3;
-}
- &:hover{
-	transform: scale (2, 4);
+/* .tile:hover{
 	opacity: 1;
- }
- .zoom {
-  padding: 50px;
-  transition: transform .2s; /* Animation */
-  width: 315px;
-  height: 167px;
-  margin: 0 auto;
+} */
+.tile_media:hover{
+	opacity:1;
 }
-
-.zoom:hover {
-  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+/*  &:hover{
+	opacity: 1;
+} */
+.zoom{
+	padding:19px;
+	transition: transform .3s;
+	opacity:1;
+	width: 315px;
+	height: 167px;
+}
+.zoom:hover{
+	transform: scale(1.3);
+	z-index:3;  
+	opacity:1;
 }
