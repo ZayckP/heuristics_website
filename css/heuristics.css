@@ -1,7 +1,3 @@
-html{
-	margin:0;
-	padding:0;
-}
 body{
 	background-color:black;
 	float:left;
@@ -9,11 +5,11 @@ body{
 	height:auto;
 	margin:0;
 	padding:0;
+	overflow-x:hidden;
 }
 header{
 	width:100vw;
 	height:350px;
-	background-color:black;
 	float:left;
 	margin:0;
 }
@@ -25,18 +21,16 @@ h1{
 	color:white;
 }
 section{
-	background-color:black;
 	width:100vw;
 	height:auto;
 }
 footer{
-	background-color:black;
 	float:left;
 	width:100vw;
-	height:300px:
+	height:300px;
 }
 p{
-    width:auto;
+    width:500px;
     margin:auto;
 	color:white;
 	text-align:center;
@@ -44,33 +38,39 @@ p{
 	font-family:'Montserrat', sans-serif;
 	float:right;
 	font-size:25px;
-	padding-right:150px;
+	padding-right:190px;
+}
+.active{
+	font-size:20px;
+	padding:20px;
+	font-family:'Montserrat', sans-serif;
+	color:white;
+	text-decoration:none;
 }
 .img{
-	padding-left:70px;
+	padding-left:100px;
 	float:left;
 	width:auto;
 	padding-top:30px;
 }
 .row{
-	overflow: scroll;
-	width: 100%;
+	overflow:scroll;
+	width:100%;
 	overflow-y:hidden;
 }
 .row__inner{
-	white-space: nowrap;
+	white-space:nowrap;
 }
 .tile{
-	display: inline-block;
+	display:inline-block;
 }
 .tile__img{
-	width: auto;
-	height: auto;
-	background-image:cover;
+	width:auto;
+	height:auto;
 }
 .tile__media{
-	width: auto;
-	height: auto;
+	width:auto;
+	height:auto;
 	opacity:1;
 }
 .tile_media:hover{
@@ -78,13 +78,63 @@ p{
 }
 .zoom{
 	padding:19px;
-	transition: transform .3s;
+	transition:transform .3s;
 	opacity:1;
-	width: 315px;
-	height: 167px;
+	width:315px;
+	height:167px;
 }
 .zoom:hover{
-	transform: scale(1.3);
+	transform:scale(1.3);
 	z-index:3;  
 	opacity:1;
+}
+@media only screen and (max-width: 600px){
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+	overflow-x:hidden;
+}
+.tile{
+	display:block;
+}
+.tile__img{
+	width:auto;
+	height:auto;
+}
+.tile__media{
+	width:100vw;
+	height:100%;
+	padding-left:70px;
+}
+.row{
+	overflow-x:hidden;
+	width:100%;
+}
+.img{
+	margin:0;
+	float:left;
+	width:75%;
+	height:auto;
+	padding-left:60px;
+}
+h1{
+	font-size:40px;
+	text-align:center;
+	font-family:'Montserrat', sans-serif;
+	color:white;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:55px;
+}
+p{
+	float:left;
+    width:70%;
+	height:auto;
+	color:white;
+	text-align:left;
+	font-family:'Montserrat', sans-serif;
+	font-size:20px;
+	padding-left:60px;
+}
 }
