@@ -113,7 +113,7 @@ body{
 }
 .img{
 	margin:0;
-	float:left;
+	float:centre;
 	width:75%;
 	height:auto;
 	padding-left:60px;
